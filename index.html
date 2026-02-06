@@ -20,9 +20,7 @@ body{
   text-align:center;
   box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
-h2{
-  margin-bottom:25px;
-}
+h2{ margin-bottom:25px; }
 button{
   font-size:18px;
   padding:12px 30px;
@@ -38,12 +36,20 @@ button{
   background:#eee;
   position:absolute;
 }
-.result{
-  text-align:center;
+.fullscreen{
+  margin:0;
+  padding:0;
+  width:100vw;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:black;
 }
-.result img{
-  width:220px;
-  border-radius:20px;
+.fullscreen img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 </style>
 </head>
@@ -66,10 +72,8 @@ function moveNo(){
 
 function yesClick(){
   document.body.innerHTML = `
-    <div class="result">
-      <h1 style="color:#ff4d6d;">❤️ Dobi said YES ❤️</h1>
-      <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif">
-      <p style="font-size:18px;">You made my day 😘</p>
+    <div class="fullscreen">
+      <img src="https://tenor.com/sGJ5XtgYny5.gif">
     </div>
   `;
 }
